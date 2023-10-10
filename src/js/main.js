@@ -1,4 +1,5 @@
-import {Timer} from './modules/timer.js';
+import { Timer } from "./modules/timer";
+import { Tomato } from "./modules/tomato";
 
 let count = 0;
 const imp = ['default', 'important', 'so-so']
@@ -17,13 +18,6 @@ document.querySelector('.button-importance').addEventListener('click', ({target}
   }
 });
 
-console.log('It works!');
-const tomato = new Timer('Tomato', 25);
-
-console.log(tomato.getId());
-console.log(tomato.getName());
-console.log(tomato.getCounter());
-
-tomato.name = '55';
-
-console.log(tomato.getName());
+const task = new Timer('First task');
+const tomato = new Tomato({tasks: [].push(task)});
+console.log('tomato: ', tomato);
